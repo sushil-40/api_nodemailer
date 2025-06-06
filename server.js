@@ -4,6 +4,7 @@ import { userUpdateTemplate } from "./nodemailer.js";
 import messageRouter from "./routers/messageRouter.js"; // default import
 
 const app = express();
+const PORT = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -31,5 +32,5 @@ app.post("/", (req, res) => {
 app.listen(8000, (error) => {
   error
     ? console.log(error)
-    : console.log(`Server is running at http://localhost:8000`);
+    : console.log(`Server is running at http://localhost:${PORT}`);
 });
