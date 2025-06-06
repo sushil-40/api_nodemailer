@@ -29,7 +29,7 @@ app.post("/", (req, res) => {
     });
   }
 });
-app.listen(8000, (error) => {
+app.listen(PORT, (error) => {
   error
     ? console.log(error)
     : console.log(`Server is running at http://localhost:${PORT}`);
